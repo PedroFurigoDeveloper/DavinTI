@@ -1,6 +1,6 @@
 # DavinTI
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)  
+![Status](https://img.shields.io/badge/concluido-green)  
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 DavinTI é um sistema simples de gerenciamento de contatos com suporte a múltiplos telefones por contato. Ele foi desenvolvido com **.NET Core, C# e PostgreSQL**, utilizando arquitetura de camadas (Domain, Service, Repository, API) para facilitar a manutenção e evolução do projeto.
