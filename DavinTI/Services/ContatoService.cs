@@ -2,6 +2,7 @@
 using DavinTI.Application.Interfaces.Service;
 using DavinTI.Domain.Entities;
 using DavinTI.Domain.Repository;
+using DavinTI.Services.Utils;
 
 namespace DavinTI.Services {
     public class ContatoService : IContatoService {
@@ -74,6 +75,8 @@ namespace DavinTI.Services {
             var contato = await _repo.GetByIdAsync(id);
             if (contato == null) throw new KeyNotFoundException("Contato não encontrado.");
             await _repo.DeleteAsync(id);
+
+            Logger.Log($"Contato excluído: Id = {contato.IdContato}, Nome = {contato.Nome}, Idade = {contato.Idade}");
         }
 
         public async Task<IEnumerable<ContatoComTelefonesDto>> GetAllComTelefonesAsync() {
